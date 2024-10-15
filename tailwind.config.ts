@@ -1,5 +1,6 @@
-import type { Config } from "tailwindcss";
+import { Config } from "tailwindcss";
 
+type Config = typeof Config
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
