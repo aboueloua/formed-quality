@@ -18,9 +18,10 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "react-type-animation": "^3.2.0",
     "resend": "^3.2.0",
     "tailwind": "^4.0.0",
-    "vercel": "^34.2.6"
+    "vercel": "^37.11.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
