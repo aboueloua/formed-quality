@@ -26,7 +26,7 @@ export async function POST(req, res) {
   try {
     await transporter.sendMail({
       from: fromEmail, // sender address
-      to: [email, fromEmail], // list of receivers
+      to: [email, fromEmail, 'contact@formedquality.com'], // list of receivers
       subject: subject, // Subject line
       text: JSON.stringify(message), // plain text body
       html: message,
