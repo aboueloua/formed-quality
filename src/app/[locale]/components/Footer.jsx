@@ -19,7 +19,7 @@ const Footer = () => {
                 {/* Right Section: Contact Information */}
                 <div className="text-center md:text-right">
                     <p className="text-sm">Contact Us:</p>
-                    <p className="text-sm">Email: support@yourcompany.com</p>
+                    <p className="text-sm">Email: support@formedquality.com</p>
                     <p className="text-sm">Phone: +123 456 7890</p>
                 </div>
             </div>
