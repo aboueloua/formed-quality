@@ -4,6 +4,8 @@ import PresentationSection from "./components/PresentationSection"
 import AboutSection from './components/AboutSection';
 import ServiceSection from './components/ServiceSection';
 import EmailSection from './components/EmailSection';
+import PartnerSection from './components/PartnerSection';
+
 
  
 export default function Index() {
@@ -15,6 +17,7 @@ export default function Index() {
         <PresentationSection></PresentationSection>
         <AboutSection/>
         <ServiceSection/>
+        <PartnerSection/>
         <EmailSection/>
       </div>
     </main>

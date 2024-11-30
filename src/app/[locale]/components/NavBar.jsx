@@ -22,6 +22,10 @@ const navLinks = [
         title: "Contact",
         path: "#contact",
     },
+    {
+        title: "Partenaires",
+        path: "#parteners",
+    }
 ];
 
 const NavBar = () => {

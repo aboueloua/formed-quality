@@ -26,6 +26,22 @@ const LanguageSwitcher = ({ className = "" }) => {
 
     return (
         <div className={`relative flex items-center ${className}`}>
+            
+
+            {/* Selected Flag and Code */}
+            {currentLanguage && (
+                <div className="flex items-center ml-2">
+                    <Image
+                        src={currentLanguage.flag}
+                        alt={`${currentLanguage.code} flag`}
+                        width={24}
+                        height={24}
+                        className="rounded-full"
+                    />
+                    <span className="ml-2 text-white"></span>
+                </div>
+            )}
+
             {/* Dropdown */}
             <select
                 value={currentLocale}
@@ -42,20 +58,6 @@ const LanguageSwitcher = ({ className = "" }) => {
                     </option>
                 ))}
             </select>
-
-            {/* Selected Flag and Code */}
-            {currentLanguage && (
-                <div className="flex items-center ml-2">
-                    <Image
-                        src={currentLanguage.flag}
-                        alt={`${currentLanguage.code} flag`}
-                        width={24}
-                        height={24}
-                        className="rounded-full"
-                    />
-                    <span className="ml-2 text-white"></span>
-                </div>
-            )}
         </div>
     );
 };

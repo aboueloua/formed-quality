@@ -6,6 +6,15 @@
       "descAboutUS": "is a company specializing in consulting relating to the compliance of premises for the installation of Radiology, Radiotherapy and Nuclear Medicine equipment.",
       "OurServices": "Our services",
       "Services":"Services",
-      "Contact":"Contact"
+      "Contact":"Contact",
+      "Partenaires": "Partners",
+      "NosPartenaires":"Our partners",
+      "Accompagnement en Radioprotection": "Support in Radiation Protection",
+      "Contôle qualité": "Quality control",
+      "Equipements biomédicaux": "Biomedical equipment",
+      "Formation": "Formation",
+      "partnerDesc": "We’ve collaborated with amazing partners across various domains to help achieve their goals.",
+      "F1": "Radiation protection of medical imaging workers.",
+      "F2": "Radiation protection of radiotherapy workers."
     }
   }
