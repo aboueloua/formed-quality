@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import ServiceSection from './components/ServiceSection';
 import EmailSection from './components/EmailSection';
 import PartnerSection from './components/PartnerSection';
+import Footer from './components/Footer';
 
 
  
@@ -19,6 +20,7 @@ export default function Index() {
         <ServiceSection/>
         <PartnerSection/>
         <EmailSection/>
+        <Footer/>
       </div>
     </main>
   );

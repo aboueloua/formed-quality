@@ -24,7 +24,7 @@ const navLinks = [
     },
     {
         title: "Partenaires",
-        path: "#parteners",
+        path: "#partners",
     }
 ];
 

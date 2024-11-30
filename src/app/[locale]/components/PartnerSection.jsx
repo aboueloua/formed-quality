@@ -26,7 +26,7 @@ const partners = [
 const PartnersSection = () => {
     const t = useTranslations('Index');
     return (
-        <section className="py-16">
+        <section id ="partners" className="py-16">
             <div className="container mx-auto px-8">
                 {/* Section Header */}
                 <h2 className="text-center text-4xl font-semibold mb-8 text-white">{t('NosPartenaires')}</h2>
