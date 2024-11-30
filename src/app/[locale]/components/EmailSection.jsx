@@ -83,7 +83,7 @@ const EmailSection = () => {
                         type="text"
                         id="subject"
                         required
-                        className="bg-white border border-cyan-400 placeholder-gray-500 text-white text-sm rounded-lg block w-full p-2.5"
+                        className="bg-white border border-cyan-400 placeholder-gray-500 text-black text-sm rounded-lg block w-full p-2.5"
                         placeholder="Just saying hi"
                       />
                     </div>
@@ -97,7 +97,7 @@ const EmailSection = () => {
                       <textarea
                         name="message"
                         id="message"
-                        className="bg-white border border-cyan-400 placeholder-gray-500 text-white text-sm rounded-lg block w-full p-2.5"
+                        className="bg-white border border-cyan-400 placeholder-gray-500 text-black text-sm rounded-lg block w-full p-2.5"
                         placeholder="Let's talk about..."
                       />
                     </div>
