@@ -39,7 +39,7 @@ const NavBar = () => {
                 <Link href={"/"} className="text-2xl md:text-5xl font-semibold">
                     <Image
                         src="/images/[removal.ai]_0d93b1ac-7ec9-474b-bd8f-be0378c817e9-logo_formed.png"
-                        width={150}
+                        width={100}
                         height={50}
                         alt="Logo"
                     />
