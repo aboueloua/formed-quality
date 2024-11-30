@@ -2,8 +2,8 @@ import { useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 const languages = [
-    { code: "en", name: "EN", flag: "/images/gb.png" },
-    { code: "fr", name: "FR", flag: "/images/fr.png" },
+    { code: "en", name: "English", flag: "/images/gb.png" },
+    { code: "fr", name: "Français", flag: "/images/fr.png" },
 ];
 
 const LanguageSwitcher = ({ className = "" }) => {
@@ -41,7 +41,7 @@ const LanguageSwitcher = ({ className = "" }) => {
                 aria-label="Select language"
                 value={currentLocale}
                 onChange={(e) => switchLanguage(e.target.value)}
-                className="appearance-none bg-black text-white border-none cursor-pointer focus:outline-none p-2 rounded"
+                className="appearance-none bg-transparent text-white border-none cursor-pointer focus:outline-none p-2"
             >
                 {languages.map((lang) => (
                     <option
