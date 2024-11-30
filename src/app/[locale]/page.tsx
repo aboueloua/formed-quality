@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 export default function Index() {
   const t = useTranslations('Index');
   return (
-  <main className="flex min-h-screen flex-col bg-[black]">
+  <main className="flex min-h-screen flex-col bg-[white]">
     <NavBar />
     <div className="container mt-24 mx-auto px-12 py-16">
         <PresentationSection></PresentationSection>

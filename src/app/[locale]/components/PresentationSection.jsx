@@ -12,10 +12,10 @@ import { TypeAnimation } from 'react-type-animation';
 const PresentationSection = () => {
     const t = useTranslations('Index');
     return (
-        <section className="lg:py-16">
+        <section className="lg:py-16 container mx-auto px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12">
                 <div className="col-span-7 place-self-center text-center sm:text-left">
-                    <h1 className="text-white mb-4 text-3xl lg:text-5xl font-bold">
+                    <h1 className="text-cyan-500 mb-4 text-3xl lg:text-5xl font-bold">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-950">
                             Formed Quality
                         </span>
@@ -37,12 +37,12 @@ const PresentationSection = () => {
                                 repeat={Infinity}
                                 />
                     </h1>
-                    <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl">
+                    <p className="text-black text-base sm:text-lg lg:text-xl">
                         FORMED QUALITY {t('title')}
                     </p>
                 </div>
                 <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-                    <div className="rounded-full bg-[black] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+                    <div className="rounded-full bg-[white] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
                     <Image
                         src = "/images/[removal.ai]_944829fb-665c-4431-8b17-dee36c20a405-107_pf2019_galerie_1576769746-dd407f.png"
                         alt = "test image"

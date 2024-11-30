@@ -1,39 +1,7 @@
-"use client"
+"use client";
 import Image from 'next/image'
-import React, { useTransition, useState} from 'react'
-import TabButton from './TabButton'
-import {useTranslations} from 'next-intl';
-
-
-const TAB_DATA = [
-    {
-        title: "Nos atouts",
-        id: "nosAtouts",
-        content: (
-            <ul className='list-disc pl-2'>
-                
-            </ul>
-        ),
-    },
-    {
-        title: "Notre organisation",
-        id: "NotreOrganisation",
-        content: (
-            <ul className='list-disc pl-2'>
-                
-            </ul>
-        ),
-    },
-    {
-        title: "Notre histoire",
-        id: "notreHistoire",
-        content: (
-            <ul className='list-disc pl-2'>
-                
-            </ul>
-        ),
-    }
-]
+import React, { useTransition, useState } from 'react'
+import { useTranslations } from 'next-intl';
 
 const AboutSection = () => {
   const t = useTranslations('Index');
@@ -42,43 +10,43 @@ const AboutSection = () => {
 
   const handleTabChange = (id) => {
     startTransition(() => {
-        setTab(id);
-    })
+      setTab(id);
+    });
   }
+
   return (
-    <section id = "about" className="text-white">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-                <Image 
-                    src="/images/about_us.png"
-                    width={500}
-                    height={500}
-                />
-                <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                    <h2 className="text-4xl font-bold text-white mb-4">{t('aboutUs')}</h2>
-                    <p className="text-base lg:text-lg">
-                    FORMED QUALITY {t('descAboutUS')}
-                    </p>
-                    <div className="flex flex-row justify-start mt-8">
-                        <TabButton selectTab ={() => handleTabChange("Nos atouts")} active = {tab === "Nos atouts"}>
-                            {" "}
-                            Nos atouts{" "}    
-                        </TabButton>
-                        <TabButton selectTab ={() => handleTabChange("Notre organisation")} active = {tab === "Notre organisation"}>
-                            {" "}
-                            Notre organisation{" "}    
-                        </TabButton>
-                        <TabButton selectTab ={() => handleTabChange("Notre histoire")} active = {tab === "Notre histoire"}>
-                            {" "}
-                            Notre histoire{" "}    
-                        </TabButton>
-                    </div>
-                    <div className='mt-8'>
-                        {TAB_DATA.find((t) => t.title === tab).content}
-                    </div>
-                </div>
+    <section id="about" className="py-16">
+      {/* Outer container with white background, shadow, and padding */}
+      <div className="bg-white p-8 rounded-xl shadow-lg">
+        <div className="container mx-auto px-8">
+          {/* Title Section */}
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-black">{t('aboutUs')}</h2>
+          </div>
+          
+          {/* Content Section */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Left side - Image */}
+            <div className="flex justify-center items-center">
+              <Image 
+                src="/images/about_us.png"
+                width={500}
+                height={500}
+                alt="About Us Image"
+              />
             </div>
+
+            {/* Right side - Text */}
+            <div className="flex flex-col justify-center">
+              <p className="text-black lg:text-lg">
+                FORMED QUALITY {t('descAboutUS')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default AboutSection
+export default AboutSection;

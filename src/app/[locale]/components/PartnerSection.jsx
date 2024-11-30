@@ -2,59 +2,68 @@
 
 import React from "react";
 import Image from "next/image";
-import {useTranslations} from 'next-intl';
-
+import { useTranslations } from 'next-intl';
 
 const partners = [
     {
-        name: "Partner A",
+        name: "Akdital",
         domain: "Equipements biomédicaux",
-        logo: "/partners/partner-a.png",
+        logo: "/images/p1.jpeg",
     },
     {
-        name: "Partner B",
+        name: "Clinique cheikh MAELAININ",
         domain: "Contôle qualité",
-        logo: "/partners/partner-b.png",
+        logo: "/images/p2.jpeg",
     },
     {
-        name: "Partner C",
+        name: "Oncorad group",
         domain: "Accompagnement en Radioprotection",
-        logo: "/partners/partner-c.png",
+        logo: "/images/p3.jpeg",
+    },
+    {
+        name: "centre Chorfi",
+        domain: "Services hospitaliers",
+        logo: "/images/p4.jpeg",
     },
 ];
 
 const PartnersSection = () => {
     const t = useTranslations('Index');
     return (
-        <section id ="partners" className="py-16">
-            <div className="container mx-auto px-8">
-                {/* Section Header */}
-                <h2 className="text-center text-4xl font-semibold mb-8 text-white">{t('NosPartenaires')}</h2>
-                <p className="text-center text-lg mb-12 text-gray-300">
-                    {t('partnerDesc')}.
-                </p>
+        <section id="partners" className="py-16">
+            {/* Separate background container for the partner section */}
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="container mx-auto px-8">
+                    {/* Section Header */}
+                    <h2 className="text-center text-4xl font-semibold mb-8 text-black">{t('NosPartenaires')}</h2>
+                    <p className="text-center text-lg mb-12 text-black">
+                        {t('partnerDesc')}.
+                    </p>
 
-                {/* Partner Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {partners.map((partner, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#1e1e1e] p-6 rounded-lg shadow-md flex flex-col items-center text-center"
-                        >
-                            {/* Partner Logo */}
-                            <Image
-                                src={partner.logo}
-                                alt={`${partner.name} Logo`}
-                                width={120}
-                                height={120}
-                                className="rounded-full"
-                            />
-                            {/* Partner Name */}
-                            <h3 className="text-2xl font-medium mt-4 text-white">{partner.name}</h3>
-                            {/* Partner Domain */}
-                            <p className="text-gray-400 mt-2">{t(partner.domain)}</p>
-                        </div>
-                    ))}
+                    {/* Partner Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {partners.map((partner, index) => (
+                            <div
+                                key={index}
+                                className="bg-white shadow-xl p-6 rounded-xl flex flex-col items-center text-center"
+                            >
+                                {/* Partner Logo */}
+                                <div className="w-24 h-24 mb-4 overflow-hidden rounded-full border-4 border-cyan-500">
+                                    <Image
+                                        src={partner.logo}
+                                        alt={`${partner.name} Logo`}
+                                        width={120}
+                                        height={120}
+                                        className="object-cover"
+                                    />
+                                </div>
+                                {/* Partner Name */}
+                                <h3 className="text-2xl font-medium mt-4 text-black">{partner.name}</h3>
+                                {/* Partner Domain */}
+                                <p className="text-black mt-2"></p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

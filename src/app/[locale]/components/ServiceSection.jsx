@@ -1,9 +1,6 @@
 import React from 'react'
 import ServiceCard from './ServiceCard'
-import {useTranslations} from 'next-intl';
-
-
-
+import { useTranslations } from 'next-intl';
 
 const ServiceSection = () => {
   const t = useTranslations('Index');
@@ -13,7 +10,7 @@ const ServiceSection = () => {
       href: "#formation",
       image: "/images/f555.webp",
       title: "Formation",
-      description : (
+      description: (
         <ul className='list-disc pl-2'>
             <li>{t('F1')}</li>  
             <li>Radioprotection des travailleurs en Radiothérapie.</li>
@@ -31,7 +28,7 @@ const ServiceSection = () => {
       href: "#equipements",
       image: "/images/f77.jpeg",
       title: "Equipements biomédicaux",
-      description : (
+      description: (
         <ul className='list-disc pl-2'>
             <li>Commercialisation des accessoires de la radioprotection en Médecine
   nucléaire, Radiothérapie, Radiologie.</li>  
@@ -43,7 +40,7 @@ const ServiceSection = () => {
       href: "#ControleQualite",
       image: "/images/control.jpeg",
       title: "Contôle qualité",
-      description : (
+      description: (
         <ul className='list-disc pl-2'>
           <li>Contrôle qualité des appariels de la radiologie médicale : Radiologie Conventionnelle, Mammographie, Scanner.</li>  
           <li>Contrôle qualité des appariels de la médecine nucléaire : Activimètre, SPECT-CT, PET.</li>
@@ -57,7 +54,7 @@ const ServiceSection = () => {
       href: "#AccRadioprotection",
       image: "/images/acc2.png",
       title: "Accompagnement en Radioprotection",
-      description : (
+      description: (
         <ul className='list-disc pl-2'>
           <li>Calcul des épaisseurs de blindage (Note de calcul).</li>
           <li>Rédaction des rapports de conformité.</li>
@@ -69,30 +66,37 @@ const ServiceSection = () => {
   épaisseurs réalisées en Radiologie et médecine nucléaire.</li>
   <li>Conception && calcul des épaisseurs des murs en Radiothérapie.</li>
   <li>Conception && calcul des épaisseurs des murs en médecine nucléaire.</li>
-          
         </ul>
       ),
     }
-    
-  ]
+  ];
+
   return (
     <>
-        <h2 id = "services" className="text-center text-4xl font-bold text-white mt-4 mb-4">
-            {t('OurServices')}
-        </h2>
+      
+
+      {/* Service Section Container with cyan background */}
+      <div className="bg-white shadow-lg p-8 md:p-12 rounded-lg mx-auto">
+      <h2 id="services" className="text-center text-4xl font-bold text-black mt-4 mb-4">
+        {t('OurServices')}
+      </h2>
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {
             services.map((service, index) => (
               <div key={index}>
-                <ServiceCard imageUrl={service.image} title={t(service.title)} href={service.href} description={service.description} />
+                <ServiceCard 
+                  imageUrl={service.image} 
+                  title={t(service.title)} 
+                  href={service.href} 
+                  description={service.description} 
+                />
               </div>
             ))
           }
-          
         </div>
-        
+      </div>
     </>
-  )
+  );
 }
 
-export default ServiceSection
+export default ServiceSection;
